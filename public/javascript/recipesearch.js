@@ -45,11 +45,11 @@ $(document).ready(function() {
           var label = response.hits[i].recipe.label;
 
           //make a make a divider and append everythign inside
-          var foodpic = $("<img src ='" + recipepic + "'>");
-          var link2 = $("<p><a href ='" + website + "'>" + label + "</a></p>");
+          var foodpic = $("<img src='" + recipepic + "' class='myRecipe'>");
+          var link2 = $("<p class='myPTag'><a href ='" + website + "'>" + label + "</a></p>");
 
           //make a button
-          var butt = $("<button>Save Recipe! </button>");
+          var butt = $("<button class='recipeSaveButton'>Save Recipe! </button>");
 
           $(contain).append(foodpic);
           $(contain).append(link2);
