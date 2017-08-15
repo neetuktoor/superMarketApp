@@ -41,3 +41,20 @@ main {
   width: 50%;
   padding: 10px;
 }
+
+.myPTag {
+  margin: 0 auto;
+}
+
+.myRecipe {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #03a9f4;
+}
+
+.recipeSaveButton {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
