@@ -36,7 +36,9 @@
       <h1 class="header center light-blue-text" style= "font-family: 'Pacifico', cursive; -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: black;">AisleFinder</h1>
       <div class="row center">
-        <h5 class="header col s12 light">Aisle Information in over 9000 Supermarkets across the US including Target, Whole Foods, Trader Joes, Safeway,CostCo and Wal-Mart.</h5>
+        <br>
+        <br>
+        <br>
       </div>
       <div class="row center">
         <a id="download-button" class="btn-large waves-effect waves-light light-blue">Get Started</a>
@@ -89,9 +91,18 @@
 </div>
 </div>
   <footer class="page-footer green">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About Us</h5>
+          <p class="white-text light">Aisle Finder offers a product's aisle location in over 9000 Supermarkets across the US including Target, Whole Foods, Trader Joes, Safeway, CostCo and Wal-Mart. Helping you navigate your grocery list, item by item.</p>
+        </div>
+      </div>
+    </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="white-text lighten-3" href="https://github.com/neetuktoor/superMarketApp">Don's Angels</a>
+      © 2017 Don's Angels
+      <a class="grey-text text-lighten-4 right" href="https://github.com/neetuktoor/superMarketApp">Github</a>
       </div>
     </div>
   </footer>
@@ -100,7 +111,7 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script type="text/javascript">
-    
+
   $('.modal').modal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
       opacity: .5, // Opacity of modal background
@@ -115,11 +126,11 @@
   );
     // on get started click
     $("#download-button").on("click", function(){
-    $(".modal").modal("open");  
+    $(".modal").modal("open");
         });
-    // on login button btn-flat 
+    // on login button btn-flat
     $("#btn-flat ").on("click", function(){
-    $(".modal2").modal("open");  
+    $(".modal2").modal("open");
         });
 </script>
   </body>

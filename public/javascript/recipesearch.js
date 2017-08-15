@@ -4,8 +4,12 @@ $(document).ready(function() {
   var searchrecipe;
   //when button is clicked to search recipes
   $(".material-icons").click(function() {
+<<<<<<< HEAD
     console.log("just clicked the search button");
     console.log("search: "  + recipesearch);
+=======
+
+>>>>>>> 60634095f8f7b711fd81eca5dec7162d0731982b
     //find the value of the input in the search
     searchrecipe = $("#search").val().trim();
 
@@ -46,11 +50,19 @@ $(document).ready(function() {
           var label = response.hits[i].recipe.label;
 
           //make a make a divider and append everythign inside
+<<<<<<< HEAD
           var foodpic = $("<img src ='" + recipepic + "'>");
           var link2 = $("<p><a href ='" + website + "'>" + label + "</a></p>");
 
           //make a button
           var butt = $("<button>Save Recipe! </button>");
+=======
+          var foodpic = $("<img src='" + recipepic + "' class='myRecipe'>");
+          var link2 = $("<p class='myPTag'><a href ='" + website + "'>" + label + "</a></p>");
+
+          //make a button
+          var butt = $("<button class='recipeSaveButton'>Save Recipe! </button>");
+>>>>>>> 60634095f8f7b711fd81eca5dec7162d0731982b
 
           $(contain).append(foodpic);
           $(contain).append(link2);

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Grocery List</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- Navigation Bar -->
+  <nav class="green lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"> <i class="material-icons">shopping_cart</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/groceryList">Grocery List</a></li>
+        <li><a href="/savedList">Saved Lists</a></li>
+        <li><a href="/recipeSearch">Recipe Search</a></li>
+        <li><a href="/recipeSaved">Saved Recipes</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/groceryList">Grocery List</a></li>
+        <li><a href="/savedList">Saved Lists</a></li>
+        <li><a href="/recipeSearch">Recipe Search</a></li>
+        <li><a href="/recipeSaved">Saved Recipes</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="container">
+  <h4> Grocery List</h4>
+  <hr>
+      <div class="row">
+        <div class="col s12 z-depth-5">
+          <div id="groceryList">
+
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">border_color</i>
+                    <input id="name" type="text" class="validate">
+                    <label for="icon_name">Name</label>
+                  </div>
+
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">format_list_numbered</i>
+                  <input id="quantity" type="number" class="validate">
+                  <label for="icon_quantity">Quantity</label>
+              </div>
+
+              <div class="input-field col s12">
+                  <i class="material-icons prefix">shopping_cart</i>
+                  <input id="Description" type="text" class="validate">
+                  <label for="icon_quantity">Description</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <h5>Category</h5>
+                    <select class ="selectChosen" id="category">
+                      <option value="" disabled selected>Select an Option</option>
+                      <option value="1">Produce</option>
+                      <option value="2">Dairy</option>
+                      <option value="3">Other</option>
+                    </select>
+                </div>
+
+
+                <a class="waves-effect waves-light btn" id="addItemButton">Add Item</a>
+          </div>`
+        </div>
+      </div>
+</div>
+
+<!-- materialize select menu -->
+  <script>
+     $(document).ready(function() {
+        $('.selectChosen').material_select();
+    });
+  </script>
+
+  <!-- Link to the jQuery Library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <!-- Materialize JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+</body>
+</html>
