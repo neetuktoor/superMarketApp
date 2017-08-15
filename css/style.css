@@ -5,37 +5,39 @@
  *
  * Made By MaterializeCSS.com
  */
-
 .icon-block {
   padding: 0 15px;
 }
 .icon-block .material-icons {
-	font-size: inherit;
+    font-size: inherit;
 }
-
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
-
 main {
     flex: 1 0 auto;
   }
-
 .modal-trigger {
     visibility: hidden;
 }
-
 .modal-content {
   overflow:visible;
 }
-
 .btn-flat {
   padding:0;
 }
-
 .search-wrapper {
   width: 50%;
   margin: 0 auto;
+}
+#index-banner-home {
+  background-image: url("https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAe-AAAAJGFjZDVkYzYzLTg1Y2ItNDk1Mi05YTZiLWYxNzhkNDcyNmI2OQ.jpg");
+  background-size:cover
+}
+#logo-container-1 {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
