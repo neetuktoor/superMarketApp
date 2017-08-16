@@ -48,19 +48,17 @@ main {
 
 .myRecipe {
   margin: auto;
+  border: 3px solid #03a9f4;
+}
+
+.recipeSaveButton {
+  margin: auto;
   width: 50%;
   padding: 10px;
 }
 
-.recipeSaveButton {
-  margin: 25px;
-  width: 25%;
-  padding: 10px;
-}
-
 .recipecontainer {
-border: 1px solid #03a9f4;
-padding: 10px;
+margin: 20px;
 }
 h5 {
   color: black;
@@ -81,7 +79,7 @@ h5 {
   width: 90%;
 }
 
-body {
+.grocerylistbackground {
     background-image: url("https://s-media-cache-ak0.pinimg.com/originals/36/64/02/366402940ff8f2fb555e80c7c6dd72eb.jpg");
   
 }
