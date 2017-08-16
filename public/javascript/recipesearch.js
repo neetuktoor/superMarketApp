@@ -2,9 +2,13 @@
 $(document).ready(function() {
 
   var searchrecipe;
+
   //when button is clicked to search recipes
   $(".waves-light").click(function() {
     console.log("i'm in the button");
+
+    //first delete all from the ingrdients database except those already saved
+
     //find the value of the input in the search
     searchrecipe = $("#search").val().trim();
 
@@ -46,11 +50,11 @@ $(document).ready(function() {
 
           //make a make a divider and append everythign inside
 
-          var foodpic = $("<img src='" + recipepic + "' class='myRecipe'>");
-          var link2 = $("<p class='myPTag'><a href ='" + website + "'>" + label + "</a></p>");
+          var foodpic = $("<img src='" + recipepic + "' class='myRecipe' id = '"+ label +"'>");
+          var link2 = $("<p class='myPTag'><a class= 'websiteurl' href ='" + website + "'>" + label + "</a></p>");
 
           //make a button
-          var butt = $("<button class='recipeSaveButton'>Save Recipe! </button>");
+          var butt = $("<div class='recipeSaveButton'>Save Recipe! </div>");
 
 
           $(contain).append(foodpic);
@@ -61,9 +65,71 @@ $(document).ready(function() {
           $(".rpics").append(contain);
           $(".recipediv").show();
 
+          //for each ingredient listed
+          for (var j = 0; j < response.hits[i].recipe.ingredients.length; j++){
+
+            //get the food item, the text, quantity
+            var ingredient = response.hits[i].recipe.ingredients[j].food;
+            var itext = response.hits[i].recipe.ingredients[j].text;
+            var quantity = response.hits[i].recipe.ingredients[j].quantity;
+
+            //store this in the ingrdients database with the name of the recipe
+            var newIng = {
+              recipename: label,
+              ingredient: ingredient,
+              quantity: quantity,
+              text: itext
+            };
+
+            //post into the ingredients database
+            $.post("/api/ingredients", newIng)
+              .then(
+
+              );
+
+          }
         }
 
       });
 
   });
+
+  //when save a recipe button is clicked
+  $(document).on('click', '.recipeSaveButton', function () {
+
+    event.preventDefault();
+
+    //find the values for recipe name, picture, and website url (this is for recipes databse)
+    var parent = $(event.target).parent();
+
+    var im = $(parent).find('img');
+    //find image
+    var rimage = $(im).attr("src");
+    //find label
+    var rlabel = $(im).attr("id");
+    //find website
+    var parentp = $(parent).find("p");
+    var atag = $(parentp).find("a");
+    var rwebsite = $(atag).attr("href");
+
+    console.log("image: " + rimage+ "label: " + rlabel + " website: " + rwebsite);
+
+    //push this into the database for Recipes
+    var newRecipe = {
+      recipename: rlabel,
+      picture: rimage,
+      website: rwebsite
+    };
+
+    $.post("/api/recipes", newRecipe, function(response){
+
+      //after saving the recipe, hide the save item button
+      $(event.target).hide();
+    });
+
+
+
+  });
+
+
 });

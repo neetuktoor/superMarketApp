@@ -15,6 +15,9 @@ module.exports = function(sequelize, DataTypes){
     },
     location:{
       type: DataTypes.TEXT
+    },
+    completed: {
+      type: DataTypes.BOOLEAN
     }
   });
 
