@@ -43,18 +43,22 @@ main {
 }
 
 .myPTag {
-  margin: 0 auto;
+  text-align: center;
 }
 
 .myRecipe {
   margin: auto;
   width: 50%;
   padding: 10px;
-  border: 1px solid #03a9f4;
 }
 
 .recipeSaveButton {
-  margin: auto;
-  width: 50%;
+  margin: 25px;
+  width: 25%;
   padding: 10px;
+}
+
+.recipecontainer {
+border: 1px solid #03a9f4;
+padding: 10px;
 }
