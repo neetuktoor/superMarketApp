@@ -58,3 +58,27 @@ main {
   width: 50%;
   padding: 10px;
 }
+
+h5 {
+  color: black;
+}
+
+.waves-effect {
+  float: right;
+  border: 2px solid white;
+}
+
+.btn-floating.btn-large i {
+    line-height: 56px;
+    background-color: white;
+    color: black;
+}
+
+.card-panel{
+  width: 90%;
+}
+
+body {
+    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/36/64/02/366402940ff8f2fb555e80c7c6dd72eb.jpg");
+  
+}
