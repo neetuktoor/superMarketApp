@@ -81,10 +81,13 @@ $(document).ready(function() {
               text: itext
             };
 
+            console.log("new ing" + newIng);
             //post into the ingredients database
             $.post("/api/ingredients", newIng)
               .then(
-
+                function(){
+                  console.log("just posted a new ingredient");
+                }
               );
 
           }
@@ -121,11 +124,12 @@ $(document).ready(function() {
       website: rwebsite
     };
 
-    $.post("/api/recipes", newRecipe, function(response){
-
-      //after saving the recipe, hide the save item button
-      $(event.target).hide();
-    });
+    $.post("/api/recipes", newRecipe)
+    .then(
+      function(){
+        console.log("just posted a new recipe");
+      }
+    );
 
 
 

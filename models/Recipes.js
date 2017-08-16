@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes){
 
-  var Recipes = sequelize.define("savedrecipes",{
+  var Recipes = sequelize.define("Recipes",{
     recipename: {
       type:  DataTypes.TEXT,
       allowNull: false
@@ -16,14 +16,6 @@ module.exports = function (sequelize, DataTypes){
     }
 
   });
-
-  //Recipes has many ingredients
-  Recipes.associate = function(models){
-
-    Recipes.hasMany(models.Ingredients, {
-      onDelete: "cascade"
-    });
-  };
 
   return Recipes;
 };

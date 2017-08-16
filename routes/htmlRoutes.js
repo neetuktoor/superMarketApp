@@ -3,31 +3,31 @@ var path = require("path");
 module.exports = function(app){
     // grocery list html
   app.get("/groceryList", function(req, res) {
-    res.sendFile(path.join(__dirname, "../groceryList.html"));
+    res.sendFile(path.join(__dirname, "../public/groceryList.html"));
   });
-  app.use(function(req, res) {
-    res.sendFile(path.join(__dirname, "../index.html"));
-  });
+  // app.use(function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../index.html"));
+  // });
 // saved list html
   app.get("/savedList", function(req, res) {
-    res.sendFile(path.join(__dirname, "../savedList.html"));
+    res.sendFile(path.join(__dirname, "../public/savedList.html"));
   });
-  app.use(function(req, res) {
-    res.sendFile(path.join(__dirname, "../index.html"));
-  });
+  // app.use(function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/index.html"));
+  // });
   // recipe search html
   app.get("/recipeSearch", function(req, res) {
-    res.sendFile(path.join(__dirname, "../recipeSearch.html"));
+    res.sendFile(path.join(__dirname, "../public/recipeSearch.html"));
   });
-  app.use(function(req, res) {
-    res.sendFile(path.join(__dirname, "../index.html"));
-  });
+  // app.use(function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../index.html"));
+  // });
    // recipe saved html
    app.get("/recipeSaved", function(req, res) {
-    res.sendFile(path.join(__dirname, "../recipeSaved.html"));
+    res.sendFile(path.join(__dirname, "..public/recipeSaved.html"));
   });
-  app.use(function(req, res) {
-    res.sendFile(path.join(__dirname, "../index.html"));
-  });
+  // app.use(function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../index.html"));
+  // });
 
-}
+};

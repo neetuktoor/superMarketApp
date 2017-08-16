@@ -6,6 +6,7 @@ module.exports = function(app){
 
   //post a new item to the database
   app.post("/api/recipes", function(req,res){
+    console.log("reqbody: " + req.body);
     db.Recipes.create(req.body).then(function(dbList){
       res.json(dbList);
     });

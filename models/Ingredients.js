@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes){
 
-  var Ingredients = sequelize.define("ingredients", {
+  var Ingredients = sequelize.define("Ingredients", {
       recipename: {
         type: DataTypes.TEXT,
         allowNull: false
@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes){
       },
 
       quantity: {
-        type: DataTypes.INT,
+        type: DataTypes.INTEGER,
         allowNull: false
       },
 
@@ -21,14 +21,5 @@ module.exports = function(sequelize, DataTypes){
         allowNull: false
       }
   });
-
-  //belongs to specific Recipes
-  Ingredients.associate = function(models){
-
-    Ingredients.belongsTo(models.Recipes, {
-
-    });
-  };
-
   return Ingredients;
 };

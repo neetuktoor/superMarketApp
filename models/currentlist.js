@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes){
 
-  var List = sequelize.define ("currentlist", {
+  var List = sequelize.define ("List", {
     name: {
       type: DataTypes.STRING,
       allowNull: false
@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes){
       allowNull: false
     },
     amount: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     location:{
