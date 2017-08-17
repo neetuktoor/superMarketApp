@@ -6,8 +6,7 @@ module.exports = function(sequelize, DataTypes){
       allowNull: false
     },
     category: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING
     },
     amount: {
       type: DataTypes.INTEGER,

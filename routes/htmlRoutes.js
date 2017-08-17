@@ -23,8 +23,8 @@ module.exports = function(app){
   //   res.sendFile(path.join(__dirname, "../index.html"));
   // });
    // recipe saved html
-   app.get("/recipeSaved", function(req, res) {
-    res.sendFile(path.join(__dirname, "..public/recipeSaved.html"));
+   app.get("/savedRecipes", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/savedRecipes.html"));
   });
   // app.use(function(req, res) {
   //   res.sendFile(path.join(__dirname, "../index.html"));

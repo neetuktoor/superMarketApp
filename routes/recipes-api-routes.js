@@ -11,4 +11,17 @@ module.exports = function(app){
       res.json(dbList);
     });
   });
+
+  //get recipes (return all saved recipes)
+  app.get("/api/recipes", function(res){
+
+    //find all saved recipes
+    db.Recipes.findAll({}).
+    then(function(data){
+      res.json(data);
+    });
+  });
+
+  
+
 };
