@@ -16,7 +16,7 @@
 </head>
 <body>
   <div class='grocerylistbackground'>
-  <nav class="black lighten-1" role="navigation">
+  <nav class="green lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container-1" href="#" class="brand-logo"> <img src="img/aislefinder.png" alt="Aisle Finder logo"></a>
 
       <ul class="right hide-on-med-and-down">
@@ -61,7 +61,7 @@
             </div>
 
             <div class="input-field col s12">
-              <p>Category</p>
+              <p style="font-weight:bold">Category</p>
                  <select class ="selectChosen" id="category">
                     <option value="" disabled selected>Select an Option</option>
                     <option value="1">Produce</option>
@@ -76,17 +76,83 @@
     </div>
   </div>
 
-<!-- button to trigger modal -->
+<!-- button to trigger modal-->
 <button data-target="modal1" class="btn modal-trigger">Modal</button>
-<!-- <a id="addButton" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a> -->
 
-<a id="addButton" class="waves-effect waves-light btn light blue"><i class="material-icons left">add</i>Add Item</a>
+  <!-- Modal Trigger 2
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Modal</a> -->
+  
+    <!-- Modal 2 Structure -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+          <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                    <label for="disabled">Disabled</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    This is an inline input field:
+                    <div class="input-field inline">
+                      <input id="email" type="email" class="validate">
+                      <label for="email" data-error="wrong" data-success="right">Email</label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
 
-    <div class="col s12 m8 offset-m2 l6 offset-l3">
-        <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid green; margin-left: 5%;">
+<!-- button to trigger modal 2-->
+<button data-target="modal2" class="btn modal-trigger">Modal</button>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col s6">
+        <a id="addButton" class="waves-effect waves-light btn light blue"><i class="material-icons left">add</i>Add Item</a>
+        </div>
+        <div class="col s6">
+        <a id="shoppingButton" class="waves-effect waves-light btn light blue"><i class="material-icons left">shopping_cart</i>Shop</a>
+        </div>
+      </div>  
+</div>
+<div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid #EF597B; margin-left: 5%;">
           <div class="row valign-wrapper">
             <div class="col s2">
-              <h5 class = green-text> Produce </h5>
+              <h5 style="color:#EF597B"> Produce </h5>
               <img src="img/apple.png" alt="apple" class="circle responsive-img">
             </div>
             <div class="col s10">
@@ -117,10 +183,10 @@
       </div>
 
       <div class="col s12 m8 offset-m2 l6 offset-l3">
-        <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid orange; margin-left: 5%;">
+        <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid #FF6D31; margin-left: 5%;">
           <div class="row valign-wrapper">
             <div class="col s2">
-              <h5 class = orange-text> Dairy </h5>
+              <h5 style="color:#FF6D31"> Dairy </h5>
               <img src="img/milk.png" alt="milk" class="circle responsive-img">
             </div>
             <div class="col s10">
@@ -151,10 +217,10 @@
       </div>
 
       <div class="col s12 m8 offset-m2 l6 offset-l3">
-        <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid blue; margin-left: 5%;">
+        <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid #FFCB18; margin-left: 5%;">
           <div class="row valign-wrapper">
             <div class="col s2">
-              <h5 class = blue-text> Bakery </h5>
+              <h5 style="color:#FFCB18"> Bakery </h5>
               <img src="img/bakery.png" alt="bread" class="circle responsive-img">
             </div>
             <div class="col s10">
@@ -185,10 +251,10 @@
       </div>
 
       <div class="col s12 m8 offset-m2 l6 offset-l3">
-        <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid red; margin-left: 5%;">
+        <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid #29A2C6; margin-left: 5%;">
           <div class="row valign-wrapper">
             <div class="col s2">
-              <h5 class = red-text> Meat/Seafood </h5>
+              <h5 style="color:#29A2C6"> Meat/Seafood </h5>
               <img src="img/chicken.png" alt="chicken" class="circle responsive-img">
             </div>
             <div class="col s10">
@@ -219,45 +285,8 @@
       </div>
   </div>
 
-  <!-- Modal Structure for let's go shopping-->
-  <div id="modal2" class="modal bottom-sheet">
-    <div class="modal-content-2">
-      <h4>Let's go shopping</h4>
-      <div class="row">
-          <div class="input-field col s12">
-              <!-- <i class="material-icons prefix">border_color</i> -->
-                <input id="ZipCode" type="number" class="validate">
-                <label>ZipCode</label>
-          </div>
-
-          <div class="input-field col s12">
-            <!-- <i class="material-icons prefix">format_list_numbered</i> -->
-              <input id="City" type="text" class="validate">
-              <label>City</label>
-           </div>
-
-           <div class="input-field col s12">
-            <!-- <i class="material-icons prefix">format_list_numbered</i> -->
-              <input id="State" type="text" class="validate">
-              <label>State</label>
-           </div>
-
-            <div class="input-field col s12">
-            <!--   <i class="material-icons prefix">shopping_cart</i> -->
-                <input id="storeName" type="text" class="validate">
-                <label>Store Name</label>
-            </div>
-
-
-    </div>
-    <div class="modal-footer-2">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Search</a>
-    </div>
-  </div>
-
-
 <!-- footer -->
-  <footer class="page-footer black">
+  <footer class="page-footer green">
     <div class="footer-copyright">
       <div class="container">
       © 2017 Don's Angels
@@ -271,7 +300,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
 
 
-<!--   modal script -->
+<!--   modal 1 script -->
   <script type="text/javascript">
 
   $('.modal').modal({
@@ -291,8 +320,25 @@
     $(".modal").modal("open");
         });
 
+// modal 2 script
+$('.modal2').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+        console.log(modal, trigger);
+      },
+    }
+  );
 
- // <!-- materialize select menu -->
+  $("#shoppingButton").on("click", function(){
+    $(".modal2").modal("open");
+        });
+
+//  <!-- materialize select menu -->
      $(document).ready(function() {
         $('.selectChosen').material_select();
     });

@@ -81,14 +81,24 @@ h5 {
 }
 
 .grocerylistbackground {
-    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/36/64/02/366402940ff8f2fb555e80c7c6dd72eb.jpg");
+    background-image: url("https://washingtonarmscollectors.org/wp-content/uploads/2016/02/cork-board.jpg");
 
 }
 
 #addButton {
   margin: auto;
+  margin-top: 10px;
   height: 30px;
-  /* width: 30px; */
   text-align:center;
   position: relative;
+  border: .5px solid white;
+}
+
+#shoppingButton {
+  margin: auto;
+  margin-top: 10px;
+  height: 30px;
+  text-align:center;
+  position: relative;
+  border: .5px solid white;
 }
