@@ -1,91 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Testing API</title>
-</head>
-<body>
-	
-<script>
-
-// info from xml2js npm package
-
+var express = require("express");
+var bodyParser = require("body-parser");
+var app = express();
 var parseString = require('xml2js').parseString;
-var http = require('http');
-function xmlToJson(url, callback) {
-  var req = http.get(url, function(res) {
-    var xml = '';
-    
-    res.on('data', function(chunk) {
-      xml += chunk;
-    });
-    res.on('error', function(e) {
-      callback(e, null);
-    }); 
-    res.on('timeout', function(e) {
-      callback(e, null);
-    }); 
-    res.on('end', function() {
-      parseString(xml, function(err, result) {
-        callback(null, result);
-      });
-    });
-  });
-}
-
-// api key
-var authKey = "7c3de4dc65"
 
 // needed variables for search
-var itemName;
-var storesByCityState;
+var store;
+var address;
 var zipCode;
 var storeName;
 
 var APIKEY = "http://www.SupermarketAPI.com/api.asmx/SearchByProductName?APIKEY=APIKEY&ItemName=?";
 
-xmlToJson(url, function(err, data) {
-  if (err) {
-    // Handle this however you like
-    return console.err(err);
-  }
-  // Do whatever you want with the data here
-  // Following just pretty-prints the object
-  console.log(JSON.stringify(data, null, 2));
-});
+var authKey = "7c3de4dc65"
 
-// AJAX call for zipcode
- $.ajax({
-      url: "http://www.SupermarketAPI.com/api.asmx/StoresByZip?APIKEY=APIKEY&ZipCode=?";
-      method: "GET"
-    }).done(function(response) {
-      console.log(response);
-    });
+// Do a get method to get all items in current list from database
+// For each item in the database:
 
-//AJAX call for stores by City & State
- $.ajax({
-      url: "http://www.SupermarketAPI.com/api.asmx/StoresByCityState?APIKEY=APIKEY&SelectedCity=?&SelectedState=?";
-      method: "GET"
-    }).done(function(response) {
-      console.log(response);
-    });
+// - Find the id of that item and store into variable
+// - do an ajax call to supermarket api "SearchforItem" using your the <store id variable>
+// - Store the item location in a variable and update database of that item in description column using the <item id variable> 
 
-//AJAX call for store name
-$.ajax({
-      url: "http://www.SupermarketAPI.com/api.asmx/ReturnStoresByName?APIKEY=APIKEY&StoreName=?";
-      method: "GET"
-    }).done(function(response) {
-      console.log(response);
-    });
+// Redirect back to the currentlist html to show all items with new desciption
 
-// AJAX call for item name
- $.ajax({
-      url: "http://www.SupermarketAPI.com/api.asmx/SearchForItem?APIKEY=APIKEY&StoreId=123456&ItemName=?";
-      method: "GET"
-    }).done(function(response) {
-      console.log(response);
-    });
-</script>
-
-</body>
-</html>
+// Have a box in the corner that reminds them of the address
