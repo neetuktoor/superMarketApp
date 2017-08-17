@@ -44,7 +44,7 @@ $(document).ready(function() {
       }
 
       //add a delete recipe button from saved lists
-      var deletebutt = $("<button> Delete recipe </button>");
+      var deletebutt = $("<button class = 'deleterecipe'> Delete recipe </button>");
       $(recipecontain).append(deletebutt);
     });
 
@@ -54,5 +54,36 @@ $(document).ready(function() {
 
 });
 
+//on delete button
+  $(document).on('click', ".deleterecipe", function () {
+    console.log("just clicked delete");
+    //grab the name of the recipe name
+    var name = $(event.target).parent().find('img').attr("id");
+    console.log("name to delete: " + name);
+    //initiate the delete ajax call
+    $.ajax({
+      method: "DELETE",
+      url: "/api/recipes/" + name
+    })
+    .done(function(){
+      console.log("just deleted a recipe from saved recipes");
+
+      //delete from ingredients
+      $.ajax({
+        method: "DELETE",
+        url: "/api/ingredients/" + name
+      })
+      .done(function(){
+        console.log("just deleted all ingredients of specific recipe");
+
+
+      });
+    });
+
+    //hide this container
+    console.log("hiding " + $(event.target).parent());
+    $(event.target).parent().hide();
+
+  });
 
 });

@@ -26,4 +26,16 @@ module.exports = function(app){
       res.json(data);
     });
   });
+
+  //delete ingredients from database with specific name
+  app.delete("/api/ingredients/:name", function(req,res){
+
+    db.Recipes.destroy({
+      where:{
+        recipename: req.params.name
+      }
+    }).then(function(post){
+      res.json(post);
+    });
+  });
 };

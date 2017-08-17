@@ -23,6 +23,18 @@ module.exports = function(app){
     });
   });
 
+  //delete recipe from database
+  app.delete("/api/recipes/:name", function(req,res){
+
+    db.Recipes.destroy({
+      where:{
+        recipename: req.params.name
+      }
+    }).then(function(post){
+      res.json(post);
+    });
+  });
+
 
 
 };
