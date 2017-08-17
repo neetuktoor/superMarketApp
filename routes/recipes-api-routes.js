@@ -13,15 +13,16 @@ module.exports = function(app){
   });
 
   //get recipes (return all saved recipes)
-  app.get("/api/recipes", function(res){
+  app.get("/api/recipes", function(req, res){
 
     //find all saved recipes
     db.Recipes.findAll({}).
     then(function(data){
+      console.log("data: " + data);
       res.json(data);
     });
   });
 
-  
+
 
 };

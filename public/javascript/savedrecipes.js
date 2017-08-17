@@ -1,10 +1,10 @@
 //when document on ready
 $(document).ready(function() {
-
+  console.log("i'm in");
   //get saved recipes from database
   $.get("/api/recipes", function(data){
 
-    console.log("saved recipes: " + data);
+  console.log("saved recipes: " + data);
   //for each of saved recipe
   for (var i = 0; i < data.length; i++){
 
@@ -42,11 +42,14 @@ $(document).ready(function() {
       //append this container to the first container
       $(recipecontain).append(itemcontainer);
       }
+
+      //add a delete recipe button from saved lists
+      var deletebutt = $("<button> Delete recipe </button>");
+      $(recipecontain).append(deletebutt);
     });
 
-    //add a delete recipe button from saved lists
-
     //append it to the document
+    $(".card-action").append(recipecontain);
   }
 
 });
