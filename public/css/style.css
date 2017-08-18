@@ -107,9 +107,12 @@ h5 {
   margin: auto;
   margin-top: 10px;
   height: 30px;
+  padding-bottom: 35px !important;
   text-align:center;
   position: relative;
   border: .5px solid white;
+  padding-right: 20px !important;
+  padding-left: 15px !important;
 }
 
 #shoppingButton {
@@ -119,6 +122,14 @@ h5 {
   text-align:center;
   position: relative;
   border: .5px solid white;
+  padding-bottom: 35px !important;
+  padding-right: 20px !important;
+  padding-left: 15px !important;
+}
+
+#buttonIcons {
+  margin-left: 0px !important;
+  margin-right:5px !important;
 }
 
 .recipecontain {
