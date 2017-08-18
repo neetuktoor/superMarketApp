@@ -162,6 +162,18 @@ h5 {
         overflow-y: scroll;
       }
 
+      .card-panel {
+        position: relative;
+   }
+
+   h5.theH5s {
+    position: absolute;
+    left: 20px;
+    top: -35px;
+    color: white !important;
+    font-size: 20px;
+}
+
     }
     /* Extra Small Devices, Phones */
     @media only screen and (min-width : 480px) {
