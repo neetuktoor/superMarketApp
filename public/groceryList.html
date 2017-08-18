@@ -83,7 +83,7 @@
   <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Modal</a> -->
   
     <!-- Modal 2 Structure -->
-    <div id="modal2" class="modal">
+    <div id="shoppingModal" class="modal2">
       <div class="modal-content">
           <div class="row">
               <form class="col s12">
@@ -152,7 +152,7 @@
         <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid #EF597B; margin-left: 5%;">
           <div class="row valign-wrapper">
             <div class="col s2">
-              <h5 style="color:#EF597B"> Produce </h5>
+              <h5 style="color:#EF597B" class="theH5s"> Produce </h5>
               <img src="img/apple.png" alt="apple" class="circle responsive-img">
             </div>
             <div class="col s10">
@@ -186,7 +186,7 @@
         <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid #FF6D31; margin-left: 5%;">
           <div class="row valign-wrapper">
             <div class="col s2">
-              <h5 style="color:#FF6D31"> Dairy </h5>
+              <h5 style="color:#FF6D31" class="theH5s"> Dairy </h5>
               <img src="img/milk.png" alt="milk" class="circle responsive-img">
             </div>
             <div class="col s10">
@@ -220,7 +220,7 @@
         <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid #FFCB18; margin-left: 5%;">
           <div class="row valign-wrapper">
             <div class="col s2">
-              <h5 style="color:#FFCB18"> Bakery </h5>
+              <h5 style="color:#FFCB18" class="theH5s"> Bakery </h5>
               <img src="img/bakery.png" alt="bread" class="circle responsive-img">
             </div>
             <div class="col s10">
@@ -254,7 +254,7 @@
         <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid #29A2C6; margin-left: 5%;">
           <div class="row valign-wrapper">
             <div class="col s2">
-              <h5 style="color:#29A2C6"> Meat/Seafood </h5>
+              <h5 style="color:#29A2C6" class="theH5s"> Meat/Seafood </h5>
               <img src="img/chicken.png" alt="chicken" class="circle responsive-img">
             </div>
             <div class="col s10">
@@ -328,8 +328,8 @@ $('.modal2').modal({
       outDuration: 200, // Transition out duration
       startingTop: '4%', // Starting top style attribute
       endingTop: '10%', // Ending top style attribute
-      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
-        console.log(modal, trigger);
+      ready: function(modal2, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+        console.log(modal2, trigger);
       },
     }
   );
