@@ -34,6 +34,11 @@ main {
   width: 50%;
   margin: 0 auto;
 }
+
+#search {
+  width: 95%;
+  height: 95%;
+}
 #index-banner-home {
   background-image: url("https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAe-AAAAJGFjZDVkYzYzLTg1Y2ItNDk1Mi05YTZiLWYxNzhkNDcyNmI2OQ.jpg");
   background-size:cover
@@ -59,9 +64,6 @@ main {
   padding: 10px;
 }
 
-.recipecontainer {
-margin: 20px;
-}
 
 h5 {
   color: black;
@@ -80,6 +82,25 @@ h5 {
 
 .card-panel{
   width: 90%;
+}
+
+.websiteurl {
+  font-weight: bold;
+  font-size: 16px;
+  
+}
+
+.recipecontainer {
+  position: relative;
+  background-color: #fff;
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  border-radius: 2px;
+  box-sizing: inherit;
+  padding-top:15px;
+}
+
+.deleterecipe {
+  margin-top: 15px;
 }
 
 #addButton {
@@ -116,6 +137,9 @@ h5 {
   padding-top: 2px;
 }
 
+.modal2 {
+  display:none;
+}
 
 /*===============  Media Queries ================*/
     /* Custom, iPhone Retina */
@@ -126,6 +150,18 @@ h5 {
       .card-panel {
         padding:5px !important;
       }
+
+      .foodpic {
+        margin: auto;
+        width: 80%;
+        height: 80%;
+      }
+
+      .recipecontain {
+        height: 300px;
+        overflow-y: scroll;
+      }
+
     }
     /* Extra Small Devices, Phones */
     @media only screen and (min-width : 480px) {
