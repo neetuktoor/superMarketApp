@@ -13,33 +13,37 @@
 </head>
 <body>
   <nav class="green lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container-1" href="#" class="brand-logo"> <img src="img/aislefinder.png" alt="Aisle Finder logo"></a>
+    <div class="nav-wrapper container"><a id="logo-container-1" href="/groceryList" class="brand-logo"> <img src="img/aislefinder.png" alt="Aisle Finder logo"></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="/">Home</a></li>
         <li><a href="/groceryList">Grocery List</a></li>
-        <li><a href="/savedList">Saved Lists</a></li>
+        <li><a href="/savedList">Saved Recipes</a></li>
         <li><a href="/savedRecipes">Recipe Search</a></li>
-        <li><a href="/recipeSaved">Saved Recipes</a></li>
+        <!-- <li><a href="/recipeSaved">Saved Recipes</a></li> -->
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="/">Home</a></li>
         <li><a href="/groceryList">Grocery List</a></li>
-        <li><a href="/savedList">Saved Lists</a></li>
+        <li><a href="/savedList">Saved Recipes</a></li>
         <li><a href="/recipeSearch">Recipe Search</a></li>
-        <li><a href="/savedRecipes">Saved Recipes</a></li>
+        <!-- <li><a href="/savedRecipes">Saved Recipes</a></li> -->
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
     <form>
         <div class="row center">
             <div class="col s12">
-              <h5>Search Recipes:</h5>
-              <div class="search-wrapper">
+                <div class="card-stacked">
+                <div class="card-content center">
+              <h4 style="font-family: 'Pacifico', cursive; -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: black;">Search Recipes:</h4>
+                </div>
+                </div>
+              <div class="search-wrapper card">
                 <input placeholder="'Chicken Stir Fry'" id="search" type="text">
                 <a class="waves-effect waves-light light-blue btn"><i class="material-icons left">search</i></a>
               </div>

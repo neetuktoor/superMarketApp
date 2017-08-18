@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Grocery List</title>
+  <title>Saved List</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,34 +16,35 @@
 </head>
 <body>
   <div class='grocerylistbackground'>
-  <nav class="black lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container-1" href="#" class="brand-logo"> <img src="img/aislefinder.png" alt="Aisle Finder logo"></a>
+  <nav class="green lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container-1" href="/groceryList" class="brand-logo"> <img src="img/aislefinder.png" alt="Aisle Finder logo"></a>
 
       <ul class="right hide-on-med-and-down">
         <li><a href="/">Home</a></li>
         <li><a href="/groceryList">Grocery List</a></li>
-        <li><a href="/savedList">Saved Lists</a></li>
+        <li><a href="/savedList">Saved Recipes</a></li>
         <li><a href="/recipeSearch">Recipe Search</a></li>
-        <li><a href="/savedRecipes">Saved Recipes</a></li>
+        <!-- <li><a href="/savedRecipes">Saved Recipes</a></li> -->
       </ul>
       <ul id="nav-mobile" class="side-nav">
         <li><a href="/">Home</a></li>
         <li><a href="/groceryList">Grocery List</a></li>
-        <li><a href="/savedList">Saved Lists</a></li>
+        <li><a href="/savedList">Saved Recipes</a></li>
         <li><a href="/recipeSearch">Recipe Search</a></li>
-        <li><a href="/savedRecipes">Saved Recipes</a></li>
+        <!-- <li><a href="/savedRecipes">Saved Recipes</a></li> -->
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 
 <!--   saved recipes -->
+<div class="container">
   <div class="col s12 m7">
-    <h2 class="header">Name of Recipe</h2>
     <div class="card horizontal">
       <div class="card-stacked">
-        <div class="card-content">
-          <p>List of Ingredients?</p>
+        <div class="card-content center">
+          <h4 style= "font-family: 'Pacifico', cursive; -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: black;">Your Saved Recipes</h4>
         </div>
         <div class="card-action">
 
@@ -51,10 +52,10 @@
       </div>
     </div>
   </div>
-
+</div>
 
 <!-- footer -->
-  <footer class="page-footer black">
+  <footer class="page-footer green">
     <div class="footer-copyright">
       <div class="container">
       © 2017 Don's Angels

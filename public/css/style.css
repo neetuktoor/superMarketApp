@@ -80,7 +80,7 @@ h5 {
   width: 90%;
 }
 
-.grocerylistbackground {
+body {
     background-image: url("https://washingtonarmscollectors.org/wp-content/uploads/2016/02/cork-board.jpg");
 
 }
@@ -101,4 +101,15 @@ h5 {
   text-align:center;
   position: relative;
   border: .5px solid white;
+}
+
+.recipecontain {
+  overflow: scroll;
+  margin: auto;
+  padding: 10px;
+  padding-right: 2cm;
+}
+
+.foodpic {
+  border: 3px solid #03a9f4;
 }
