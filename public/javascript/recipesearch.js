@@ -137,3 +137,14 @@ $(document).ready(function() {
 
 
 });
+
+
+
+
+// $("#somebutton").on("click",function(){
+//   $(".images-go-here").html(
+
+//     "<img src = " + someimageurl + ">"
+
+//   )
+// });
