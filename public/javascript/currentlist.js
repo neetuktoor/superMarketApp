@@ -24,7 +24,7 @@
 //   });
 // });
 
-//neetu's attempt at fixing don's code
+//neetu's attempt at fixing Don's code
 //when a user click the add to list button
 $("addToList").on("click", function (event) {
   event.preventDefault();
