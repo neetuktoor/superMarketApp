@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes){
 
-  var List = sequelize.define ("List", {
+  var Lists = sequelize.define ("Lists", {
     name: {
       type: DataTypes.STRING,
       allowNull: false
@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes){
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    location:{
+    description:{
       type: DataTypes.TEXT
     },
     completed: {
@@ -20,5 +20,5 @@ module.exports = function(sequelize, DataTypes){
     }
   });
 
-  return List;
+  return Lists;
 };
