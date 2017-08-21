@@ -29,6 +29,7 @@ app.use(express.static("public"));
 require("./routes/currentlist-api-routes.js")(app);
 require("./routes/ingredients-api-routes.js")(app);
 require("./routes/recipes-api-routes.js")(app);
+require("./routes/users-routes.js")(app);
 require("./routes/htmlRoutes.js")(app);
 
 // var request = require('request');

@@ -22,6 +22,10 @@ module.exports = function(app){
   // app.use(function(req, res) {
   //   res.sendFile(path.join(__dirname, "../index.html"));
   // });
+  //route to register.html
+  app.get("/register", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/register.html"));
+  });
    // recipe saved html
    app.get("/savedRecipes", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/savedRecipes.html"));
