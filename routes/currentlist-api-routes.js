@@ -11,4 +11,14 @@ module.exports = function(app){
       res.json(dbList);
     });
   });
+
+  //get all items in current list database
+  app.get("/api/currentlist", function(req,res){
+
+    db.Lists.findAll({}).
+    then(function(response){
+      console.log("items: " + response);
+      res.json(response);
+    });
+  });
 };
