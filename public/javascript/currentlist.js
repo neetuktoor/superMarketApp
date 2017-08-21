@@ -6,7 +6,9 @@ $(document).ready(function() {
   var $category = $("#category");
 
   //click event
-$("#addButton").on("click", function() {
+$(".modal-action").click(function() {
+  console.log("item added");
+
   var list = {
     name: $name.val(),
     quantity: $quantity.val(),
