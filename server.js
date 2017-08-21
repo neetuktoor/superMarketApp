@@ -5,7 +5,8 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
-
+var request = require("request");
+var parseString = require('xml2js').parseString;
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -29,6 +30,16 @@ require("./routes/currentlist-api-routes.js")(app);
 require("./routes/ingredients-api-routes.js")(app);
 require("./routes/recipes-api-routes.js")(app);
 require("./routes/htmlRoutes.js")(app);
+
+// request("http://www.SupermarketAPI.com/api.asmx/StoresByZip?APIKEY=7c3de4dc65&ZipCode=95130", function (error, response, body) {
+// if (!error && response.statusCode == 200) {
+//   // console.log(body) // Print the google web page.
+//   var xml = body;
+//   parseString(xml, function (err, result) {
+//   console.log(result);
+//   });
+//   }
+// });
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

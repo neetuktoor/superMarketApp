@@ -9,7 +9,7 @@ module.exports = function(app){
   //   res.sendFile(path.join(__dirname, "../index.html"));
   // });
 // saved list html
-  app.get("/savedList", function(req, res) {
+  app.get("/savedRecipes", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/savedRecipes.html"));
   });
   // app.use(function(req, res) {
@@ -29,6 +29,6 @@ module.exports = function(app){
   app.use(function(req, res) {
     res.sendFile(path.join(__dirname, "../index.html"));
   });
- 
+
 
 };

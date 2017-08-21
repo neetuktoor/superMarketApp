@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background-image: url("https://washingtonarmscollectors.org/wp-content/uploads/2016/02/cork-board.jpg");
-    
+
   }
 main {
     flex: 1 0 auto;
@@ -94,7 +94,7 @@ h5 {
 .websiteurl {
   font-weight: bold;
   font-size: 16px;
-  
+
 }
 
 .recipecontainer {
@@ -162,7 +162,7 @@ h5 {
 /*===============  Media Queries ================*/
     /* Custom, iPhone Retina */
     @media only screen and (max-width : 600px) {
-      h5.theH5s { 
+      h5.theH5s {
         font-size: 16px;
       }
       .card-panel {
@@ -195,22 +195,22 @@ h5 {
     }
     /* Extra Small Devices, Phones */
     @media only screen and (min-width : 480px) {
-       
+
     }
     /* Small Devices, Tablets */
     @media only screen and (min-width : 768px) {
-      
+
     }
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 992px) {
-      
+
     }
     /* Large Devices, Wide Screens */
     @media only screen and (min-width : 1200px) {
-      
+
     }
     /* Very Large Devices, Wide Screens */
     @media only screen and (min-width : 1300px) {
-      
+
     }
 /*================================================*/
