@@ -31,15 +31,16 @@ require("./routes/ingredients-api-routes.js")(app);
 require("./routes/recipes-api-routes.js")(app);
 require("./routes/htmlRoutes.js")(app);
 
-// request("http://www.SupermarketAPI.com/api.asmx/StoresByZip?APIKEY=7c3de4dc65&ZipCode=95130", function (error, response, body) {
-// if (!error && response.statusCode == 200) {
-//   // console.log(body) // Print the google web page.
-//   var xml = body;
-//   parseString(xml, function (err, result) {
-//   console.log(result);
-//   });
-//   }
+// var request = require('request');
+// request("http://www.SupermarketAPI.com/api.asmx/ReturnStoresByName?APIKEY=7c3de4dc65&StoreName=Safeway", function (error, response, body) {
+//   if (!error && response.statusCode == 200) {
+//     // console.log(body) // Print the google web page.
+//     var xml = body
+//     parseString(xml, function (err, result) {
+//     console.log(result.ArrayOfStore.Store[0]);
 // });
+//   }
+// })
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

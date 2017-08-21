@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "supermarket",
+    "database": "aisleFinder",
     "host": "localhost",
     "dialect": "mysql",
     "port" : "8889"
