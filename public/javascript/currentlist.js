@@ -1,4 +1,4 @@
-// don's code
+// Don's code
 // $(document).ready(function() {
 // console.log("this is working");
 //   var name = $("#name");
