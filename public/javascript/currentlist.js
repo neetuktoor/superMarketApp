@@ -14,7 +14,7 @@ $(document).ready(function() {
       $.get("/api/currentlist", function (data){
 
         console.log("current list: " + data);
-
+        //console.log(data[count].completed + "data count: " + count);
         //for each of the saved item sent back, append it to the html
         if (count < data.length && !data[count].completed){
 
@@ -87,14 +87,12 @@ $(document).ready(function() {
       });
 
     // empty each input box by replacing the value with an empty string
-    $("#item").val("");
+    $("#name").val("");
     $("#category").val("");
-    $("#amount").val("");
-    $("#description").val("");
+    $("#quantity").val("");
+    $("#Notes").val("");
 
-    if (count === 0 ){
-      count++;
-    }
+
     getCurrentList();
   });
 
@@ -104,8 +102,12 @@ $(document).ready(function() {
   event.stopPropagation();
   $.ajax({
     method: "DELETE",
-    url: "/api/currentlist"
-  }).done(getCurrentList);
+    url: "/api/currentlist/all"
+  }).done(function(){
+    count = 0;
+    $("tbody").empty();
+
+  });
 });
 });
 
@@ -116,15 +118,3 @@ $(document).ready(function() {
 // var zip = $("#zip").val().trim();
 // var city = $("#city").val().trim();
 // var state = $("#state").val().trim();
-
-<<<<<<< HEAD
-});
-});
-=======
-// });
-// });
-
-
-
-
->>>>>>> abd39a9aa9443a0d52441519ba6a058bca72ba87
