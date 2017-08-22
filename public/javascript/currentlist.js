@@ -16,7 +16,7 @@ $(document).ready(function() {
         console.log("current list: " + data);
 
         //for each of the saved item sent back, append it to the html
-        if (count < data.length){
+        if (count < data.length && !data[count].completed){
 
           // put information in td rows
           var newItem = $("<tr><td>" + data[count].name + "</td><td>" + data[count].amount + "</td><td>"  + data[count].description + "</td><td><input type='checkbox' id=test5'/><label for='test5'></label></td></tr>");
@@ -92,6 +92,9 @@ $(document).ready(function() {
     $("#amount").val("");
     $("#description").val("");
 
+    if (count === 0 ){
+      count++;
+    }
     getCurrentList();
   });
 
@@ -105,7 +108,3 @@ var state = $("#state").val().trim();
 
 });
 });
-
-
-
-
