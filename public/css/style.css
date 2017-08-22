@@ -5,6 +5,9 @@
  *
  * Made By MaterializeCSS.com
  */
+
+@import url('https://fonts.googleapis.com/css?family=Arvo|Dosis|Josefin+Sans|Orbitron|Questrial');
+
 .icon-block {
   padding: 0 15px;
 }
@@ -62,7 +65,7 @@ main {
   margin: auto;
   width: 50%;
   padding: 10px;
-  background-color: #66BB6A;
+  background-color: gray;
   border-radius: 50px;
   border: 1px solid white;
   width: 150px;
@@ -110,28 +113,55 @@ h5 {
   margin-top: 15px;
 }
 
+.additem{
+  background-color: teal;
+  color: white;
+  border-radius: 50px;
+  border: 1px solid white;
+  width: 150px;
+  box-shadow: 2px 2px 2px #888888;
+  margin-bottom: 10px;
+
+}
+
 #addButton {
-  margin: auto;
+/*  margin: auto*/;
   margin-top: 10px;
   height: 30px;
   padding-bottom: 35px !important;
   text-align:center;
-  position: relative;
+ /* position: relative;*/
   border: .5px solid white;
-  padding-right: 20px !important;
-  padding-left: 15px !important;
+/*  padding-right: 20px !important;*/
+ /* padding-left: 15px !important;*/
+  float: left;
 }
 
 #shoppingButton {
-  margin: auto;
+/*  margin: auto;*/
   margin-top: 10px;
   height: 30px;
   text-align:center;
-  position: relative;
+ /* position: relative;*/
   border: .5px solid white;
   padding-bottom: 35px !important;
-  padding-right: 20px !important;
-  padding-left: 15px !important;
+/*  padding-right: 20px !important;
+  padding-left: 15px !important*/;
+  float: left;
+}
+
+#clearButton {
+/*  margin: auto;*/
+  margin-top: 10px;
+  height: 30px;
+  text-align:center;
+ /* position: relative;*/
+  border: .5px solid white;
+  padding-bottom: 35px !important;
+/*  padding-right: 20px !important;
+  padding-left: 15px !important;*/
+  background-color: gray;
+  float: right;
 }
 
 #buttonIcons {
@@ -158,6 +188,33 @@ h5 {
 .modal2 {
   display:none;
 }
+
+#addToList {
+  background-color: teal;
+  color: white;
+  text-align: center;
+  width: 200px;
+  box-shadow: 3px 3px 3px #888888;
+}
+
+.recipeBox {
+    width: 500px;
+    height: 500px;
+    overflow: scroll;
+    margin-left: 100px;
+}
+
+/* body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }*/
+     
+
 
 /*===============  Media Queries ================*/
     /* Custom, iPhone Retina */

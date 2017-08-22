@@ -13,7 +13,7 @@
 </head>
 <body>
   <div class='grocerylistbackground'>
-  <nav class="green lighten-1" role="navigation">
+  <nav class="black lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container-1" href="/groceryList" class="brand-logo"> <img src="img/aislefinder.png" alt="Aisle Finder logo"></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="/">Home</a></li>
@@ -37,8 +37,7 @@
   <!-- Modal Structure -->
   <div id="modal1" class="modal modal1">
     <div class="modal-content">
-      <h4 style="font-family: 'Pacifico', cursive; -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: black;"> Grocery List</h4>
+      <h4 style="font-family: font-family: 'Orbitron', sans-serif; font-family: 'Questrial', sans-serif; font-family: 'Arvo', serif; font-family: 'Josefin Sans', sans-serif; font-family: 'Dosis', sans-serif;;"> Grocery List</h4>
       <div class="row">
           <div class="input-field col s12">
               <i class="material-icons prefix">border_color</i>
@@ -69,7 +68,7 @@
       </div>
     </div>
     <div class="modal-footer">
-      <a id="addToList" class="modal-action modal-close waves-effect waves-green btn-flat">Add to List</a>
+      <a id="addToList" class="modal-action modal-close waves-effect waves-teal btn-flat">Add to List</a>
     </div>
   </div>
 <!-- button to trigger modal-->
@@ -84,8 +83,7 @@
               <form class="col s12">
                   <div class="row">
                       <div class="input-field col s12">
-                        <h5 style="font-family: 'Pacifico', cursive; -webkit-text-stroke-width: 1px;
-                        -webkit-text-stroke-color: black;">Find Your Store</h5>
+                        <h4 style="font-family: font-family: 'Orbitron', sans-serif; font-family: 'Questrial', sans-serif; font-family: 'Arvo', serif; font-family: 'Josefin Sans', sans-serif; font-family: 'Dosis', sans-serif;;"> Find Your Store</h4>
                       </div>
                     </div>
                 <div class="row">
@@ -113,16 +111,19 @@
     </div>
 <!-- button to trigger modal 2-->
 <button data-target="modal2" class="btn modal-trigger">Modal</button>
-<div class="container">
+<!-- <div class="container">
     <div class="row">
-        <div class="col s6">
+        <div class="col s4">
         <a id="addButton" class="waves-effect waves-light btn light blue"><i class="material-icons left" id="buttonIcons">add</i>Add Item</a>
         </div>
-        <div class="col s6">
+        <div class="col s4">
         <a id="shoppingButton" class="waves-effect waves-light btn light blue"><i class="material-icons left" id="buttonIcons">shopping_cart</i>Shop</a>
         </div>
+         <div class="col s4">
+        <a id="clearButton" class="waves-effect waves-light btn light gray"><i class="material-icons left" id="buttonIcons">clear</i>Clear</a>
+        </div>
       </div>
-</div>
+</div> -->
 <div class="col s12 m8 offset-m2 l6 offset-l3">
         <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid #EF597B; margin-left: 5%;">
           <div class="row valign-wrapper">
@@ -137,6 +138,7 @@
                       <th>Item Name</th>
                       <th>Quantity (pcs)</th>
                       <th>Description</th>
+
                   </tr>
                 </thead>
 
@@ -148,6 +150,7 @@
           </div>
         </div>
       </div>
+
       <div class="col s12 m8 offset-m2 l6 offset-l3">
         <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid #FF6D31; margin-left: 5%;">
           <div class="row valign-wrapper">
@@ -245,6 +248,23 @@
         </div>
       </div>
   </div>
+
+   <div class="footer-copyright" style="background-color: black; position: fixed; bottom: 0; width: 100%">
+            <div class="container">
+              <div class="row">
+                <!-- <div class="col s1"> -->
+                <a id="addButton" class="waves-effect waves-light btn light black"><i class="material-icons left" id="buttonIcons">add</i></a>
+               <!--  </div> -->
+                <!-- <div class="col s1"> -->
+                <a id="shoppingButton" class="waves-effect waves-light btn light black"><i class="material-icons left" id="buttonIcons">shopping_cart</i></a>
+                <!-- </div> -->
+                 <!-- <div class="col s1"> -->
+                <a id="clearButton" class="waves-effect waves-light btn light gray"><i class="material-icons left" id="buttonIcons">clear</i></a>
+               <!--  </div> -->
+              </div>
+            </div>
+          </div>
+        </footer>
 
  <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
