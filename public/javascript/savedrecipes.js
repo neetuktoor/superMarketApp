@@ -25,7 +25,7 @@ $(document).ready(function() {
         console.log(hello);
 
         //make a container
-        recipecontain = $("<div id = '" + data[count].recipename.substring(0, 4) + "'></div>");
+        recipecontain = $("<div class=recipeBox id = '" + data[count].recipename.substring(0, 4) + "'></div>");
 
         //append name with website url, picture
         var foodpic = $("<img src='" + picture + "' id ='" + name + "' class='foodpic' >");

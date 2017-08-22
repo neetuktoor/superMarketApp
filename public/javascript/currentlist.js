@@ -95,16 +95,27 @@ $(document).ready(function() {
     getCurrentList();
   });
 
-$(document).on("click", "#goButton", function(event) {
-
-// var APIKEY = "http://www.SupermarketAPI.com/api.asmx/StoresByZip?APIKEY=7c3de4dc65&ZipCode=95130";
-console.log("this is working");
-var zip = $("#zip").val().trim();
-var city = $("#city").val().trim();
-var state = $("#state").val().trim();
-
+//clear button
+ $(document).on("click", "#clearButton", function() {
+  console.log("just clicked delete");
+  event.stopPropagation();
+  $.ajax({
+    method: "DELETE",
+    url: "/api/currentlist"
+  }).done(getCurrentList);
 });
 });
+
+//supermarket api
+// $(document).on("click", "#goButton", function(event) {
+
+// // var APIKEY = "http://www.SupermarketAPI.com/api.asmx/StoresByZip?APIKEY=7c3de4dc65&ZipCode=95130";
+// var zip = $("#zip").val().trim();
+// var city = $("#city").val().trim();
+// var state = $("#state").val().trim();
+
+// });
+// });
 
 
 
