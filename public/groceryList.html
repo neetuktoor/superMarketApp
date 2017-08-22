@@ -90,25 +90,25 @@
                     </div>
                 <div class="row">
                   <div class="input-field col s6">
-                    <input placeholder="Zipcode" id="first_name" type="text" class="validate">
-                    <label for="first_name">Zipcode</label>
+                    <input placeholder="Zipcode" id="zip" type="text" class="validate">
+                    <label for="Zipcode">Zipcode</label>
                   </div>
                   <div class="input-field col s6">
-                    <input id="last_name" type="text" class="validate">
-                    <label for="last_name">City</label>
+                    <input placeholder="City" id="city" type="text" class="validate">
+                    <label for="city">City</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
-                    <label for="password">State</label>
+                    <input placeholder ="State" id="state" type="text" class="validate">
+                    <label for="state">State</label>
                   </div>
                 </div>
               </form>
             </div>
       </div>
       <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Go!</a>
+        <a href="#!" id= "goButton" class="modal-action modal-close waves-effect waves-green btn-flat">Go!</a>
       </div>
     </div>
 <!-- button to trigger modal 2-->
@@ -221,11 +221,11 @@
         </div>
       </div>
       <div class="col s12 m8 offset-m2 l6 offset-l3">
-        <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid #29A2C6; margin-left: 5%;">
+        <div class="card-panel snow lighten-5 z-depth-5" style="border-top: 30px solid purple; margin-left: 5%;">
           <div class="row valign-wrapper">
             <div class="col s2">
-              <h5 style="color:#29A2C6" class="theH5s"> Other </h5>
-              <img src="img/chicken.png" alt="chicken" class="circle responsive-img">
+              <h5 style="color:purple" class="theH5s"> Other </h5>
+              <img src="img/plate.png" alt="plate" class="circle responsive-img">
             </div>
             <div class="col s10">
               <table class="responsive-table">
@@ -245,15 +245,7 @@
         </div>
       </div>
   </div>
-<!-- footer -->
-  <footer class="page-footer green">
-    <div class="footer-copyright">
-      <div class="container">
-      © 2017 Don's Angels
-      <a class="grey-text text-lighten-4 right" href="https://github.com/neetuktoor/superMarketApp">Github</a>
-      </div>
-    </div>
-  </footer>
+
  <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
@@ -283,7 +275,7 @@ $('.modal2').modal({
       startingTop: '4%', // Starting top style attribute
       endingTop: '10%', // Ending top style attribute
       ready: function(modal2, trigger) { // Callback for Modal open. Modal and trigger parameters available.
-        console.log(modal2, trigger);
+        // console.log(modal2, trigger);
       },
     }
   );
