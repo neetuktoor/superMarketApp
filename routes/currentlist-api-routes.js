@@ -21,4 +21,22 @@ module.exports = function(app){
       res.json(response);
     });
   });
+
+  //delete all items in current list
+  app.delete("/api/currentlist/all" , function(req,res){
+    console.log("delete route");
+    db.Lists.destroy({
+      where: {
+        completed : true
+      }
+    }).then (function(post){
+      db.Lists.destroy({
+        where: {
+          completed: false
+        }
+      }). then (function(posts){
+        res.json(posts);
+      });
+    });
+  });
 };

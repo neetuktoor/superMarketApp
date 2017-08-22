@@ -14,9 +14,9 @@ $(document).ready(function() {
       $.get("/api/currentlist", function (data){
 
         console.log("current list: " + data);
-
+        //console.log(data[count].completed + "data count: " + count);
         //for each of the saved item sent back, append it to the html
-        if (count < data.length){
+        if (count < data.length && !data[count].completed){
 
           // put information in td rows
           var newItem = $("<tr><td>" + data[count].name + "</td><td>" + data[count].amount + "</td><td>"  + data[count].description + "</td><td><input type='checkbox' id='status' /><label for='status'></label></td></tr>");
@@ -87,10 +87,11 @@ $(document).ready(function() {
       });
 
     // empty each input box by replacing the value with an empty string
-    $("#item").val("");
+    $("#name").val("");
     $("#category").val("");
-    $("#amount").val("");
-    $("#description").val("");
+    $("#quantity").val("");
+    $("#Notes").val("");
+
 
     getCurrentList();
   });
@@ -101,8 +102,12 @@ $(document).ready(function() {
   event.stopPropagation();
   $.ajax({
     method: "DELETE",
-    url: "/api/currentlist"
-  }).done(getCurrentList);
+    url: "/api/currentlist/all"
+  }).done(function(){
+    count = 0;
+    $("tbody").empty();
+
+  });
 });
 });
 
@@ -113,10 +118,3 @@ $(document).ready(function() {
 // var zip = $("#zip").val().trim();
 // var city = $("#city").val().trim();
 // var state = $("#state").val().trim();
-
-// });
-// });
-
-
-
-
