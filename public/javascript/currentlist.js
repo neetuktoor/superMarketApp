@@ -19,7 +19,7 @@ $(document).ready(function() {
         if (count < data.length){
 
           // put information in td rows
-          var newItem = $("<tr><td>" + data[count].name + "</td><td>" + data[count].amount + "</td><td>"  + data[count].description + "</td><td><input type='checkbox' id=test5'/><label for='test5'></label></td></tr>");
+          var newItem = $("<tr><td>" + data[count].name + "</td><td>" + data[count].amount + "</td><td>"  + data[count].description + "</td><td><input type='checkbox' id='status' /><label for='status'></label></td></tr>");
 
           //append it to the body
           if (data[count].category == "1"){
@@ -97,8 +97,8 @@ $(document).ready(function() {
 
 $(document).on("click", "#goButton", function(event) {
 
-var APIKEY = "http://www.SupermarketAPI.com/api.asmx/StoresByZip?APIKEY=7c3de4dc65&ZipCode=95130";
-
+// var APIKEY = "http://www.SupermarketAPI.com/api.asmx/StoresByZip?APIKEY=7c3de4dc65&ZipCode=95130";
+console.log("this is working");
 var zip = $("#zip").val().trim();
 var city = $("#city").val().trim();
 var state = $("#state").val().trim();

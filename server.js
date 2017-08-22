@@ -50,23 +50,22 @@ require("./routes/htmlRoutes.js")(app);
 //     // console.log(body) // Print the google web page.
 //     var xml = body
 //     parseString(xml, function (err, result) {
-//     // console.log(result.ArrayOfStore.Store[0]);
 //     console.log(result.ArrayOfStore.Store);
+// //     console.dir(result.ArrayOfStore.Store);
+// });
+//   }
+// });
+
+// var request = require('request');
+// request("http://www.SupermarketAPI.com/api.asmx/SearchForItem?APIKEY=7c3de4dc65&StoreId=fde2bd2e6d&ItemName=Apple", function (error, response, body) {
+//   if (!error && response.statusCode == 200) {
+//     // console.log(body) // Print the google web page.
+//     var xml = body
+//     parseString(xml, function (err, result) {
+//     // console.log(result.ArrayOfStore.Store[0]);
 // });
 //   }
 // })
-
-var request = require('request');
-request("http://www.SupermarketAPI.com/api.asmx/SearchForItem?APIKEY=7c3de4dc65&StoreId=fde2bd2e6d&ItemName=Apple", function (error, response, body) {
-  if (!error && response.statusCode == 200) {
-    // console.log(body) // Print the google web page.
-    var xml = body
-    parseString(xml, function (err, result) {
-    // console.log(result.ArrayOfStore.Store[0]);
-    console.log(result.ArrayOfProduct);
-});
-  }
-})
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

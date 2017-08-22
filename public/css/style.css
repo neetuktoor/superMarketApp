@@ -159,6 +159,10 @@ h5 {
   display:none;
 }
 
+#addToList {
+  background-color: green;
+}
+
 /*===============  Media Queries ================*/
     /* Custom, iPhone Retina */
     @media only screen and (max-width : 600px) {
