@@ -1,65 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
   <title>Saved List</title>
-
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-
-
 </head>
 <body>
   <div class='grocerylistbackground'>
-  <<nav class="green lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container-1" href="/groceryList" class="brand-logo"> <img src="img/aislefinder.png" alt="Aisle Finder logo"></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/">Home</a></li>
-        <li><a href="/groceryList">Grocery List</a></li>
-        <!-- <li><a href="/savedList">Saved Recipes</a></li> -->
-        <li><a href="/recipeSearch">Recipe Search</a></li>
-        <li><a href="/savedRecipes">Saved Recipes</a></li>
-        <li><a href="/register">Register</a></li>
-      </ul>
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="/">Home</a></li>
-        <li><a href="/groceryList">Grocery List</a></li>
-        <li><a href="/savedList">Saved Recipes</a></li>
-        <li><a href="/recipeSearch">Recipe Search</a></li>
-        <li><a href="/register">Register</a></li>
-        <!-- <li><a href="/recipeSaved">Saved Recipes</a></li> -->
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-
-<!--   saved recipes -->
-<div class="container">
-  <div class="col s12 m7" id="savedRecipes">
-    <div class="card horizontal">
-      <div class="card-stacked">
-        <div class="card-content center">
-          <h4 style= "font-family: 'Pacifico', cursive; -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: black;">Your Saved Recipes</h4>
+    <nav class="green lighten-1" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container-1" href="/groceryList" class="brand-logo"> <img src="img/aislefinder.png" alt="Aisle Finder logo"></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/">Home</a></li>
+          <li><a href="/groceryList">Grocery List</a></li>
+          <!-- <li><a href="/savedList">Saved Recipes</a></li> -->
+          <li><a href="/recipeSearch">Recipe Search</a></li>
+          <li><a href="/savedRecipes">Saved Recipes</a></li>
+          <li><a href="/register">Register</a></li>
+        </ul>
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/groceryList">Grocery List</a></li>
+          <li><a href="/savedList">Saved Recipes</a></li>
+          <li><a href="/recipeSearch">Recipe Search</a></li>
+          <li><a href="/register">Register</a></li>
+          <!-- <li><a href="/recipeSaved">Saved Recipes</a></li> -->
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+    <!-- modal -->
+    <div id="modal1" class="modal modal1">
+      <div class="modal-content">
+        <h4 style="font-family: 'Pacifico', cursive; -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;"> Grocery List</h4>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">border_color</i>
+            <input id="name" type="text" class="validate">
+            <label for="icon_name">Name</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">format_list_numbered</i>
+            <input id="quantity" type="number" class="validate">
+            <label for="icon_quantity">Quantity</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">shopping_cart</i>
+            <input id="Notes" type="text" class="validate">
+            <label for="icon_quantity">Notes</label>
+          </div>
+          <div class="input-field col s12">
+            <p style="font-weight:bold">Category</p>
+            <select class="selectChosen" id="category">
+                    <option value="" disabled selected>Select an Option</option>
+                    <option value="1">Produce</option>
+                    <option value="2">Dairy</option>
+                    <option value="3">Bakery</option>
+                    <option value="4">Meat/Seafood</option>
+                    <option value="5">Other</option>
+                  </select>
+          </div>
         </div>
-        <div class="card-action">
-
+      </div>
+      <div class="modal-footer">
+        <a id="addToList" class="modal-action modal-close waves-effect waves-green btn-flat">Add to List</a>
+      </div>
+    </div>
+    <!-- button to trigger modal-->
+    <button data-target="modal1" class="btn modal-trigger">Modal</button>
+    <!--   saved recipes -->
+    <div class="container">
+      <div class="col s12 m7" id="savedRecipes">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content center">
+              <h4 style="font-family: 'Pacifico', cursive; -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: black;">Your Saved Recipes</h4>
+            </div>
+            <div class="card-action">
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-
- <!--  Scripts-->
+    <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-  <script src= "./javascript/savedrecipes.js" type="text/javascript"></script>
 
+    <!--   modal 1 script -->
+    <script type="text/javascript">
+      $('.modal').modal({
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        opacity: .5, // Opacity of modal background
+        inDuration: 300, // Transition in duration
+        outDuration: 200, // Transition out duration
+        startingTop: '4%', // Starting top style attribute
+        endingTop: '10%', // Ending top style attribute
+        ready: function (modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+          // console.log(modal, trigger);
+        },
+      }
+      );
+
+      $("button.additem").on("click", function () {
+        $(".modal1").modal("open");
+      });
+
+      $(document).ready(function() {
+        $('.selectChosen').material_select();
+    });   
+
+    </script>
+  <script src="./javascript/savedrecipes.js" type="text/javascript"></script>
   </body>
 </html>

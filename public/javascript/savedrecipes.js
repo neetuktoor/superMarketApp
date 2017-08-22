@@ -110,4 +110,8 @@ $(document).ready(function() {
 
   });
 
+  $(document).on('click', ".additem", function() {
+    console.log("pizzapizza");
+    $('#modal1').modal('open');
+  });
 });
