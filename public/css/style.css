@@ -19,7 +19,11 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background-image: url("https://washingtonarmscollectors.org/wp-content/uploads/2016/02/cork-board.jpg");
-
+   /* font-family: 'Orbitron', sans-serif;
+    font-family: 'Questrial', sans-serif;
+    font-family: 'Arvo', serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Dosis', sans-serif;*/ 
   }
 main {
     flex: 1 0 auto;
@@ -111,6 +115,16 @@ h5 {
 
 .deleterecipe {
   margin-top: 15px;
+  margin-top: 10px;
+  height: 30px;
+/*  text-align:center;*/
+  border: .5px solid white;
+  background-color: gray;
+  color: white;
+  border-radius: 50px;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px #888888;
+  width: 150px;
 }
 
 .additem{
@@ -164,6 +178,8 @@ h5 {
   float: right;
 }
 
+
+
 #buttonIcons {
   margin-left: 0px !important;
   margin-right:5px !important;
@@ -192,7 +208,7 @@ h5 {
 #addToList {
   background-color: teal;
   color: white;
-  text-align: center;
+/*  text-align: center;*/
   width: 200px;
   box-shadow: 3px 3px 3px #888888;
 }
@@ -201,7 +217,7 @@ h5 {
     width: 500px;
     height: 500px;
     overflow: scroll;
-    margin-left: 100px;
+    margin-left: 170px;
 }
 
 /* body {
